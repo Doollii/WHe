@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- 게시글 썸네일 이미지 -->
+    <ImageView
+        android:id="@+id/postThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_foreground" />
+
+    <!-- 게시글 본문 -->
+    <LinearLayout
+        android:id="@+id/postContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/postThumbnail"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 게시글 작성자 정보 -->
+        <LinearLayout
+            android:id="@+id/postAuthorInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <!-- 작성자 프로필 사진 -->
+            <ImageView
+                android:id="@+id/authorProfileImage"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_launcher_foreground" />
+
+            <!-- 작성자 이름 -->
+            <TextView
+                android:id="@+id/authorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Smith"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginStart="8dp" />
+
+        </LinearLayout>
+
+        <!-- 게시글 본문 내용 -->
+        <TextView
+            android:id="@+id/postTextContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is the test."
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:lineSpacingExtra="4dp"
+            android:layout_marginTop="8dp" />
+    </LinearLayout>
+
+</RelativeLayout>
